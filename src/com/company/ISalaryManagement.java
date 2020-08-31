@@ -4,7 +4,7 @@ package com.company;
  *  İşçilerin maaş düzenleme sayfalarında kullanılacak olan metodların bulunduğu interface.
  *  Her bir işçi sınıfı için ayrı ayrı çağrılmıştır.
  */
-public interface SalaryManagement {
+public interface ISalaryManagement {
     /**
      * İlgili işçinin maaşının artmış halini hesaplayan metod
      * @param employee ilgili işçi

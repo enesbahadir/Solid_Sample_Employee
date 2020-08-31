@@ -3,7 +3,7 @@ package com.company;
 /**
  *  Developer olarak tanımlanan işçinin maaş işlemlerinin gerçekleştirildiği sınıf
  */
-public class DeveloperSalaryManagement implements SalaryManagement{
+public class DeveloperISalaryManagement implements ISalaryManagement {
     /**
      *  Developer olaralk tanımlanan işçinin yıllık maaş artışını hesaplayan metod
      * @param employee ilgili işçi

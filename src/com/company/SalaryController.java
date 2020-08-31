@@ -6,14 +6,14 @@ package com.company;
  * calculateIncreasedSalary metodunu çalıştırır
  */
 public class SalaryController {
-    private final SalaryManagement salaryManagement;
+    private final ISalaryManagement ISalaryManagement;
 
     /**
      * constructor metodu
-     * @param salaryManagement SalaryManagement objesi
+     * @param ISalaryManagement SalaryManagement objesi
      */
-    public SalaryController(SalaryManagement salaryManagement) {
-        this.salaryManagement = salaryManagement;
+    public SalaryController(ISalaryManagement ISalaryManagement) {
+        this.ISalaryManagement = ISalaryManagement;
 
     }
 
@@ -22,7 +22,7 @@ public class SalaryController {
      * @param employee ilgili işçi
      */
     public void executeCalculateIncreasedSalary(Employee employee) {
-        salaryManagement.calculateIncreasedSalary(employee);
+        ISalaryManagement.calculateIncreasedSalary(employee);
     }
 
     /**
@@ -30,6 +30,6 @@ public class SalaryController {
      * @param employee
      */
     public void executeCalculateDecreasedSalary(Employee employee) {
-        salaryManagement.calculateDecreasedSalary(employee);
+        ISalaryManagement.calculateDecreasedSalary(employee);
     }
 }

@@ -1,6 +1,4 @@
 package com.company;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  *  Sistemin çalışmasını kontrol eden sınıf
@@ -27,18 +25,18 @@ public class Main {
 
         SalaryController salaryController;
         if(manager.getIsManager())
-            salaryController = new SalaryController(new ManagerSalaryManagement());
+            salaryController = new SalaryController(new ManagerISalaryManagement());
 
         else
-            salaryController = new SalaryController(new DeveloperSalaryManagement());
+            salaryController = new SalaryController(new DeveloperISalaryManagement());
 
         salaryController.executeCalculateIncreasedSalary(developer);
         System.out.println(developer.toString());
 
         if(manager.getIsManager())
-            salaryController = new SalaryController(new ManagerSalaryManagement());
+            salaryController = new SalaryController(new ManagerISalaryManagement());
         else
-            salaryController = new SalaryController(new DeveloperSalaryManagement());
+            salaryController = new SalaryController(new DeveloperISalaryManagement());
 
         salaryController.executeCalculateIncreasedSalary(manager);
         System.out.println(manager.toString());

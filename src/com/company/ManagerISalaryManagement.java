@@ -2,7 +2,7 @@ package com.company;
 /**
  *  Manager olarak tanımlanan işçinin maaş işlemlerinin gerçekleştirildiği sınıf
  */
-public class ManagerSalaryManagement implements SalaryManagement{
+public class ManagerISalaryManagement implements ISalaryManagement {
     static double MANAGER_ANNUAL_RAISE_SALARY =  1.3;
     /**
      *  Manager olaralk tanımlanan işçinin yıllık maaş artışını hesaplayan metod
