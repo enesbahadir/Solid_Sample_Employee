@@ -3,7 +3,7 @@ package com.company;
 /**
  * Sistemde bulunan işçilerin bilgilerinin tanımlandığı sınıf
  */
-public class Employee {
+abstract class Employee {
     private Integer annualVacation;
     private String name;
     private Double salary;

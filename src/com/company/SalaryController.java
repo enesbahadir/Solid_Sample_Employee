@@ -18,7 +18,7 @@ public class SalaryController {
     }
 
     /**
-     *
+     *ilgili işçinin maaşının arttırılmış halini hesaplaycak olan metodu ISalaryManagement interface'i üzerinden çağıran metod
      * @param employee ilgili işçi
      */
     public void executeCalculateIncreasedSalary(Employee employee) {
@@ -26,7 +26,7 @@ public class SalaryController {
     }
 
     /**
-     *
+     *ilgili işçinin maaşının azaltılmış halini hesaplaycak olan metodu ISalaryManagement interface'i üzerinden çağıran metod
      * @param employee
      */
     public void executeCalculateDecreasedSalary(Employee employee) {

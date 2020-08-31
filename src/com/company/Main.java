@@ -9,10 +9,10 @@ public class Main {
 
         int annualLeaveSample1 = 5, annualLeaveSample2 = 80;
 
-        Employee developer = new Employee(15,"Bahadır",1000,false);
+        Employee developer = new Developer(15,"Bahadır",1000,false);
         System.out.println(developer.toString());
 
-        Employee manager = new Employee(15,"Enes",1500,true);
+        Employee manager = new Manager(15,"Enes",1500,true);
         System.out.println(manager.toString());
 
         /*List<Employee> employees = new ArrayList<Employee>();
