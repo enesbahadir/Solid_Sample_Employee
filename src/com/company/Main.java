@@ -9,10 +9,10 @@ public class Main {
 
         int annualLeaveSample1 = 5, annualLeaveSample2 = 80;
 
-        Employee developer = new Developer(15,"Bahadır",1000,false);
+        Employee developer = new Developer(15,"Bahadır",1000, Positions.DEVELOPER);
         System.out.println(developer.toString());
 
-        Employee manager = new Manager(15,"Enes",1500,true);
+        Employee manager = new Manager(15,"Enes",1500, Positions.MANAGER);
         System.out.println(manager.toString());
 
         /*List<Employee> employees = new ArrayList<Employee>();
@@ -23,21 +23,23 @@ public class Main {
         companyController.addEmployeeToCompany(manager,company);
         companyController.addEmployeeToCompany(developer,company); */
 
-        SalaryController salaryController;
-        if(manager.getIsManager())
-            salaryController = new SalaryController(new ManagerISalaryManagement());
-
-        else
-            salaryController = new SalaryController(new DeveloperISalaryManagement());
+        SalaryController salaryController = null;
+        switch (manager.getPosition()) {
+            case DEVELOPER:
+                salaryController = new SalaryController(new DeveloperISalaryManagement());
+            case MANAGER:
+                salaryController = new SalaryController(new ManagerISalaryManagement());
+        }
 
         salaryController.executeCalculateIncreasedSalary(developer);
         System.out.println(developer.toString());
 
-        if(manager.getIsManager())
-            salaryController = new SalaryController(new ManagerISalaryManagement());
-        else
-            salaryController = new SalaryController(new DeveloperISalaryManagement());
-
+        switch (developer.getPosition()) {
+            case DEVELOPER:
+                salaryController = new SalaryController(new DeveloperISalaryManagement());
+            case MANAGER:
+                salaryController = new SalaryController(new ManagerISalaryManagement());
+        }
         salaryController.executeCalculateIncreasedSalary(manager);
         System.out.println(manager.toString());
 

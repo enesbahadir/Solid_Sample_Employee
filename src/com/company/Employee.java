@@ -7,21 +7,20 @@ abstract class Employee {
     private Integer annualVacation;
     private String name;
     private Double salary;
-    private boolean isManager;
+    private Positions position;
 
     /**
      * constructor metodu
-     *
-     * @param annualVacation işçinin kullanabileceği izin miktarı
+     *  @param annualVacation işçinin kullanabileceği izin miktarı
      * @param name           işçinin ismi
      * @param salary         işçinin maaşı
-     * @param isManager      işçinin manager türünde olup, olmaması
+     * @param position işçinin pozisyonu
      */
-    public Employee(Integer annualVacation, String name, double salary, boolean isManager) {
+    public Employee(Integer annualVacation, String name, double salary, Positions position) {
         this.annualVacation = annualVacation;
         this.name = name;
         this.salary = salary;
-        this.isManager = isManager;
+        this.position = position;
     }
 
     /**
@@ -56,12 +55,12 @@ abstract class Employee {
         this.salary = salary;
     }
 
-    public boolean getIsManager() {
-        return isManager;
+    public Positions getPosition() {
+        return position;
     }
 
-    public void setIsManager(boolean isManager) {
-        this.isManager = isManager;
+    public void setPosition(Positions position) {
+        this.position = position;
     }
 
     @Override
