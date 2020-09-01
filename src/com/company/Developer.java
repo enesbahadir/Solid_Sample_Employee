@@ -9,7 +9,7 @@ public class Developer extends Employee{
      * @param salary         işçinin maaşı
      * @param position       işçinin pozisyonu
      */
-    public Developer(Integer annualVacation, String name, double salary, Positions position) {
+    public Developer(Integer annualVacation, String name, double salary, EmployeePositions position) {
         super(annualVacation, name, salary, position);
     }
 }

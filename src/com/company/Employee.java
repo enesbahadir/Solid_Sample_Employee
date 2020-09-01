@@ -7,7 +7,7 @@ abstract class Employee {
     private Integer annualVacation;
     private String name;
     private Double salary;
-    private Positions position;
+    private EmployeePositions position;
 
     /**
      * constructor metodu
@@ -16,7 +16,7 @@ abstract class Employee {
      * @param salary         işçinin maaşı
      * @param position işçinin pozisyonu
      */
-    public Employee(Integer annualVacation, String name, double salary, Positions position) {
+    public Employee(Integer annualVacation, String name, double salary, EmployeePositions position) {
         this.annualVacation = annualVacation;
         this.name = name;
         this.salary = salary;
@@ -55,11 +55,11 @@ abstract class Employee {
         this.salary = salary;
     }
 
-    public Positions getPosition() {
+    public EmployeePositions getPosition() {
         return position;
     }
 
-    public void setPosition(Positions position) {
+    public void setPosition(EmployeePositions position) {
         this.position = position;
     }
 

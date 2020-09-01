@@ -9,7 +9,7 @@ public class Manager extends Employee {
      * @param salary         işçinin maaşı
      * @param position       işçinin pozisyonu
      */
-    public Manager(Integer annualVacation, String name, double salary, Positions position) {
+    public Manager(Integer annualVacation, String name, double salary, EmployeePositions position) {
         super(annualVacation, name, salary, position);
     }
 }

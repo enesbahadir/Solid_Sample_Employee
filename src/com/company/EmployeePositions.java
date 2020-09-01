@@ -3,6 +3,6 @@ package com.company;
 /**
  * şirkette çalışan işçilerin pozisyonları
  */
-public enum Positions {
-    DEVELOPER, MANAGER;
+public enum EmployeePositions {
+    DEVELOPER, MANAGER
 }

@@ -14,7 +14,6 @@ public class SalaryController {
      */
     public SalaryController(ISalaryManagement ISalaryManagement) {
         this.ISalaryManagement = ISalaryManagement;
-
     }
 
     /**
