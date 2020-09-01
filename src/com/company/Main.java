@@ -17,28 +17,27 @@ public class Main {
         Employee manager = new Manager(15,"Enes",1500, EmployeePositions.MANAGER);
         System.out.println(manager.toString());
 
-        List<Employee> aTypeCompanyEmployees = new ArrayList<Employee>();
-        Company aTypeCompany = new ATypeCompany(aTypeCompanyEmployees, "Aurora",1);
-
-        List<Employee> bTypeCompanyEmployees = new ArrayList<Employee>();
-        Company bTypeCompany = new BTypeCompany(bTypeCompanyEmployees, "Arora",2);
-
-       // CompanyController companyController = new CompanyController();
-        /*
-        Company company = new Company(employees, "Aurora", 1);
-
-        CompanyController companyController = new CompanyController();
-        companyController.addEmployeeToCompany(developer,company);
-        companyController.addEmployeeToCompany(manager,company);
-        companyController.addEmployeeToCompany(developer,company); */
-
         SalaryController salaryController = null;
-
-
         salaryController = getSalaryController(developer, salaryController);
-
         salaryController = getSalaryController(manager, salaryController);
 
+        List<Employee> aTypeCompanyEmployees = new ArrayList<Employee>();
+        Company aTypeCompany = new ATypeCompany(aTypeCompanyEmployees, "Aurora",1, CompanyType.ATYPECOMPANY);
+
+        List<Employee> bTypeCompanyEmployees = new ArrayList<Employee>();
+        Company bTypeCompany = new BTypeCompany(bTypeCompanyEmployees, "Arora",2, CompanyType.BTYPECOMPANY);
+
+        CompanyController companyController = null;
+        companyController = new CompanyController(new ATypeCompanyManagement());
+        companyController.executeAddEmployee(aTypeCompany,developer);
+
+        companyController.executeDeleteEmployee(aTypeCompany,manager);
+        companyController.executeDeleteEmployee(aTypeCompany,developer);
+
+        companyController = new CompanyController(new BTypeCompanyManagement());
+        companyController.executeAddEmployee(bTypeCompany,manager);
+        companyController.executeAddEmployee(bTypeCompany,manager);
+        companyController.executeAddEmployee(bTypeCompany,developer);
 
     }
 

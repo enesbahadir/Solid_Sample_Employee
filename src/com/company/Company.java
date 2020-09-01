@@ -2,23 +2,25 @@ package com.company;
 import java.util.List;
 
 /**
- *
+ * Şirketin özelliklerinin bulunduğu sınıf
  */
 public abstract class Company {
     private List <Employee> employees;
     private String name;
     private int id;
+    private CompanyType companyType;
 
     /**
      *
-     * @param employees
-     * @param name
-     * @param id
+     * @param employees şirkette çalışan işçilerin listesi
+     * @param name şirketin ismi
+     * @param id şirkete özel üretin numara
      */
-    public Company(List<Employee> employees, String name, int id) {
+    public Company(List<Employee> employees, String name, int id, CompanyType companyType) {
         this.employees = employees;
         this.name = name;
         this.id = id;
+        this.companyType = companyType;
     }
 
     public int getId() {
@@ -47,5 +49,13 @@ public abstract class Company {
     public String getName() {
 
         return name;
+    }
+
+    public CompanyType getCompanyType() {
+        return companyType;
+    }
+
+    public void setCompanyType(CompanyType companyType) {
+        this.companyType = companyType;
     }
 }
