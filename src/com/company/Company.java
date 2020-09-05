@@ -2,7 +2,7 @@ package com.company;
 import java.util.List;
 
 /**
- * Şirketin özelliklerinin bulunduğu sınıf
+ * Şirketin özelliklerinin bulunduğu sınıftır
  */
 public abstract class Company {
     private List <Employee> employees;
